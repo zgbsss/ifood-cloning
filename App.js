@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-// Olhar o sugestoes.js
+// começar e terminar pedidos ofertas e resolver erro do backend
