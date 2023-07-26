@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-// começar e terminar pedidos ofertas e resolver erro do backend
+// Arrumar erros de digitação na paginas e mostrar para o Eduardo
