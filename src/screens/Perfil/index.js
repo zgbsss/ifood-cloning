@@ -12,8 +12,9 @@ export default function Perfil() {
                         <Text style={styles.title}> Notificações </Text>
                         <Text style={styles.description}> Minha Central de Notificações </Text>
                     </ScrollView>
-                    <MaterialCommunityIcons name="keyboard-arrow-right" color="#999" size={20} />
+                    <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
                 </TouchableOpacity>
+
                 <TouchableOpacity 
                 style={styles.options}
                 onPress={() => navigation.navigate ('Pagamentos')}>
@@ -24,6 +25,7 @@ export default function Perfil() {
                     </ScrollView>
                     <MaterialIcons name="keyboard-arrow-right" color='#999' size={20}/>
                 </TouchableOpacity>
+
                 <TouchableOpacity>
                     <MaterialCommunityIcons 
                         name="ticket-outline"
@@ -105,19 +107,10 @@ export default function Perfil() {
                     </View>
                     <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
                     </TouchableOpacity>
-
-
-
-
+                    
                 </View>
             </ScrollView>
-
         </ScrollView>
-
-
-
-
-
     );
 }
 

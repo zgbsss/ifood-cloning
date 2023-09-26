@@ -42,8 +42,10 @@ export default function Routes() {
     <NavigationContainer>
       <BottomTab.Navigator
         screenOptions={{
-          tabBarActiveTintColor: "Red",
-          tabBarInactiveTintColor: "black",
+          tabBarActiveTintColor: "#DE2B2B",
+          tabBarInactiveTintColor: "#4B4B4B",
+          tabBarInactiveBackgroundColor: '#D9D9D9',
+          tabBarActiveBackgroundColor: '#FFFFFF',
         }}
       >
         <BottomTab.Screen
