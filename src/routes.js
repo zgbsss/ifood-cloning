@@ -19,24 +19,7 @@ const BottomTab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
 
-function HomeRoutes() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Item" component={Item} />
-    </Stack.Navigator>
-  )
-}
-
-function PerfilRoutes() {
-  return (
-    <Stack.Navigator>
-        <Stack.Screen name="Perfil" component={Perfil} />
-        <Stack.Screen name="Pagamentos" component={Pagamentos} />
-    </Stack.Navigator>
-  )
-}
-
+// Nav Bar
 export default function Routes() {
   return (
     <NavigationContainer>
@@ -46,6 +29,8 @@ export default function Routes() {
           tabBarInactiveTintColor: "#4B4B4B",
           tabBarInactiveBackgroundColor: '#D9D9D9',
           tabBarActiveBackgroundColor: '#FFFFFF',
+          headerTintColor: 'white',
+          headerStyle: {backgroundColor: '#DE2B2B'},
         }}
       >
         <BottomTab.Screen
@@ -94,6 +79,25 @@ export default function Routes() {
       </BottomTab.Navigator>
     </NavigationContainer>
   );
+}
+
+// Nav Bar Interna
+function HomeRoutes() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Item" component={Item} />
+    </Stack.Navigator>
+  )
+}
+
+function PerfilRoutes() {
+  return (
+    <Stack.Navigator>
+        <Stack.Screen name="Perfil" component={Perfil} />
+        <Stack.Screen name="Pagamentos" component={Pagamentos} />
+    </Stack.Navigator>
+  )
 }
 
 function PedidosRouter() {
