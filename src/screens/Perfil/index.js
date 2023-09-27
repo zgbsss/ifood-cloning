@@ -2,11 +2,14 @@ import React from 'react';
 import { View, Text, StyleSheet,TouchableOpacity, ScrollView } from 'react-native';
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 
+import Logout from '../../components/Perfil/Logout';
+
 export default function Perfil() {
     return( 
         <ScrollView style={styles.container} >
             <ScrollView>
-                <TouchableOpacity style={styles.options} onPress={() => {}} >
+                {/* Opções Gerais */}
+                <TouchableOpacity style={styles.options} onPress={() => {}}>
                     <MaterialCommunityIcons name="bell-outline" size={35} color="#333"/>
                     <ScrollView style={styles.info} >
                         <Text style={styles.title}> Notificações </Text>
@@ -15,9 +18,7 @@ export default function Perfil() {
                     <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
                 </TouchableOpacity>
 
-                <TouchableOpacity 
-                style={styles.options}
-                onPress={() => navigation.navigate ('Pagamentos')}>
+                <TouchableOpacity style={styles.options} onPress={() => {}}>
                     <MaterialCommunityIcons name="credit-card" size={35} color="#333"/>
                     <ScrollView style={styles.info}>
                         <Text style={styles.title}>Pagamentos</Text>
@@ -26,12 +27,8 @@ export default function Perfil() {
                     <MaterialIcons name="keyboard-arrow-right" color='#999' size={20}/>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
-                    <MaterialCommunityIcons 
-                        name="ticket-outline"
-                        size={35}
-                        color="333"
-                    />
+                <TouchableOpacity style={styles.options} onPress={() => {}}>
+                    <MaterialCommunityIcons name="ticket-outline" size={35} color="333" />
                     <ScrollView style={styles.info}>
                         <Text style={styles.title}>Cupons</Text>
                         <Text style={styles.description}>Meus Cupons de Desconto</Text>
@@ -39,7 +36,7 @@ export default function Perfil() {
                     <MaterialIcons name="keyboard-arrow-right" color="#999" size={20}/>
                 </TouchableOpacity>
                 
-                <TouchableOpacity style={styles.option} onPress={() => {}}>
+                <TouchableOpacity style={styles.options} onPress={() => {}}>
                     <MaterialCommunityIcons name="heart-outline" size={35} color="#333" />
                         <ScrollView style={styles.info}>
                             <Text style={styles.title}>Favoritos</Text>
@@ -48,26 +45,9 @@ export default function Perfil() {
                     <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.option} onPress={() => {}}>
-                <MaterialCommunityIcons name="credit-card" size={35} color="#333" />
-                <ScrollView style={styles.info}>
-                    <Text style={styles.title}>Fidelidade</Text>
-                    <Text style={styles.description}>Minhas fidelidades</Text>
-                </ScrollView>
-                <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.option} onPress={() => {}}>
-                <MaterialCommunityIcons name="map-marker" size={35} color="#333" />
-                <ScrollView style={styles.info}>
-                    <Text style={styles.title}>Endereços</Text>
-                    <Text style={styles.description}>Meus endereços de entrega</Text>
-                </ScrollView>
-                <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
-                </TouchableOpacity>
-
+                {/* Opções Adicionais */}
                 <View style={styles.menuAdicional}>
-                    <TouchableOpacity style={styles.opcoesAdicionais}>
+                    <TouchableOpacity style={styles.optionsAdd}>
                         <View style={styles.wrapper}>
                             <MaterialCommunityIcons name="lifebuoy" size={25} color="#CDC"/>
                             <Text style={styles.optionsName}>Ajuda</Text>
@@ -75,39 +55,15 @@ export default function Perfil() {
                         <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
                     </TouchableOpacity>
 
-
-                    <TouchableOpacity style={styles.opcoesAdicionais}>
+                    <TouchableOpacity style={styles.optionsAdd}>
                     <View style={styles.wrapper}>
                         <MaterialIcons name="settings" size={25} color="#CDC" />
-                        <Text style={styles.optionName}>Configurações</Text>
+                        <Text style={styles.optionsName}>Configurações</Text>
                     </View>
                     <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.opcoesAdicionais}>
-                    <View style={styles.wrapper}>
-                        <MaterialIcons name="security" size={25} color="#CDC" />
-                        <Text style={styles.optionName}>Segurança</Text>
-                    </View>
-                    <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={styles.opcoesAdicionais}>
-                    <View style={styles.wrapper}>
-                        <MaterialIcons name="store-mall-directory" size={25} color="#CDC" />
-                        <Text style={styles.optionName}>Sugerir Restaurantes</Text>
-                    </View>
-                    <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={styles.opcoesAdicionais}>
-                    <View style={styles.wrapper}>
-                        <MaterialCommunityIcons name="rocket" size={25} color="#CDC" />
-                        <Text style={styles.optionName}>Seja parceiro!</Text>
-                    </View>
-                    <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
-                    </TouchableOpacity>
-                    
+                    <Logout />
                 </View>
             </ScrollView>
         </ScrollView>
@@ -119,7 +75,9 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor: '#fff',
     },
-    option: {
+
+    // Options CSS
+    options: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',
@@ -129,23 +87,8 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         paddingRight: 20,
         border: 1,
-
     },
-    info: {
-        marginLeft: 20,
-    },
-    title: {
-        color: '#333',
-        fontSize: 18,
-    },
-    description: {
-        fontSize: 16,
-        color: '#999',
-    },
-    menuAdicional: {
-        marginTop: 30,
-    },
-    opcoesAdicionais: {
+    optionsAdd: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -158,14 +101,33 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         paddingRight: 20,
         border: 1,
-      },
-      wrapper: {
-        flexDirection: 'row',
-        alignItems: 'center',
-      },
-      optionName: {
+    },
+    optionsName: {
         marginLeft: 25,
         color: '#ccc',
         fontSize: 15,
-      },
+    },
+
+    // Options Gerais CSS
+    info: {
+        marginLeft: 20,
+    },
+    title: {
+        color: '#333',
+        fontSize: 18,
+    },
+    description: {
+        fontSize: 16,
+        color: '#999',
+    },
+
+    // Menu Adicional CSS
+
+    menuAdicional: {
+        marginTop: 30,
+    },
+    wrapper: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    }
 });
