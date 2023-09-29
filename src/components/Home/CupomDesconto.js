@@ -5,7 +5,6 @@ import { Image, Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 export default function CupomDesconto() {
     return(
         <TouchableOpacity style={styles.cupom}>
-            <View style={styles.divisor}>
                 <View style={styles.conteudo}>
                     <Image
                     source={require('../../assets/discount-coupon.png')}
@@ -20,7 +19,6 @@ export default function CupomDesconto() {
                     color={'#FF5665'}
                     />
                 </View>
-            </View>
         </TouchableOpacity>
     );
 }
@@ -35,11 +33,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         marginVertical: 0,
         marginHorizontal: 20,
-    },
-    divisor: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
     },
     conteudo: {
         flexDirection: 'row',
