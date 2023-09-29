@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
   aviso: {
     marginTop: 25,
-    fontSize: 18,
-    color: '#333',
+    fontSize: 17,
+    color: '#999',
   },
 });

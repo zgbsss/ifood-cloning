@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+import Input from '../../components/Input';
+
+
 export default function Busca() {
     return( 
         <View style={styles.container} > 
-            <Text>Busca</Text>
-
+            <Input placeholder="Busca"/>
         </View>
 
 
