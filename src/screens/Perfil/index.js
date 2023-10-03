@@ -4,7 +4,7 @@ import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 
 import Logout from '../../components/Perfil/Logout';
 
-export default function Perfil() {
+export default function Perfil({navigation}) {
     return( 
         <ScrollView style={styles.container} >
             <ScrollView>
@@ -63,7 +63,7 @@ export default function Perfil() {
                     <MaterialIcons name="keyboard-arrow-right" color="#999" size={20} />
                     </TouchableOpacity>
 
-                    <Logout />
+                    <Logout navigation={navigation}/>
                 </View>
             </ScrollView>
         </ScrollView>

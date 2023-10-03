@@ -14,6 +14,7 @@ import Perfil from "./screens/Perfil";
 import Pedidos from "./screens/Pedidos";
 import Pagamentos from './screens/Pagamentos';
 import Item from './screens/Item';
+import Login from "./screens/Login";  
 
 const BottomTab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -68,7 +69,7 @@ export default function Routes() {
 
         <BottomTab.Screen
           name="Perfil"
-          component={Perfil}
+          component={PerfilRoutes}
           options={{
             tabBarLabel: "Perfil",
             tabBarIcon: ({ color }) => (
@@ -96,6 +97,7 @@ function PerfilRoutes() {
     <Stack.Navigator>
         <Stack.Screen name="Perfil" component={Perfil} />
         <Stack.Screen name="Pagamentos" component={Pagamentos} />
+        <Stack.Screen name="Login" component={Login} options={{headerShown: false}} />
     </Stack.Navigator>
   )
 }

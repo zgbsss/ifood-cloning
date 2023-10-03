@@ -2,9 +2,9 @@ import react from "react";
 import { MaterialIcons } from '@expo/vector-icons'
 import { Text, TouchableOpacity, View, StyleSheet } from 'react-native'
 
-export default function Logout() {
+export default function Logout({navigation}) {
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity onPress={() => navigation.navigate("Login")} style={styles.container} >
             <View style={styles.divisor}>
                 <View style={styles.conteudo}>
                     <MaterialIcons name="logout" color={"#DE2B2B"} size={25}/>
