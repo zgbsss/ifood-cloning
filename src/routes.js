@@ -17,13 +17,34 @@ import Item from './screens/Item';
 import Login from "./screens/Login";  
 
 const BottomTab = createBottomTabNavigator();
+const StackMain = createStackNavigator();
 const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
 
 // Nav Bar
+
 export default function Routes() {
   return (
     <NavigationContainer>
+      <Stack.Navigator>
+          <Stack.Screen 
+            name="Login" 
+            component={Login} 
+            options={{headerShown:false}} 
+          />
+        <Stack.Screen 
+          name="Main" 
+          component={Main}
+          options={{headerShown:false}} 
+        />
+      </Stack.Navigator>  
+    </NavigationContainer>
+  )
+}
+
+
+function Main() {
+  return (
       <BottomTab.Navigator
         screenOptions={{
           tabBarActiveTintColor: "#DE2B2B",
@@ -78,7 +99,6 @@ export default function Routes() {
           }}
         />
       </BottomTab.Navigator>
-    </NavigationContainer>
   );
 }
 
@@ -97,7 +117,6 @@ function PerfilRoutes() {
     <Stack.Navigator>
         <Stack.Screen name="Perfil" component={Perfil} />
         <Stack.Screen name="Pagamentos" component={Pagamentos} />
-        <Stack.Screen name="Login" component={Login} options={{headerShown: false}} />
     </Stack.Navigator>
   )
 }
