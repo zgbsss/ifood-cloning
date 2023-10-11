@@ -17,6 +17,7 @@ export default function CupomDesconto() {
                     <MaterialIcons
                     name="keyboard-arrow-right"
                     color={'#FF5665'}
+                    size={20}
                     />
                 </View>
         </TouchableOpacity>
@@ -44,6 +45,7 @@ const styles = StyleSheet.create({
     },
     info: {
         marginLeft: 10,
+        marginRight: 30,
     },
     titulo: {
         fontWeight: 'bold',
