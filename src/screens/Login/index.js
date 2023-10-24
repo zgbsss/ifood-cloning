@@ -9,9 +9,9 @@ export default function Login({navigation}){
     return (
         <View  style={styles.container}>
             <Input style={styles.input} placeholder="Email"/>
-            <Text>OI</Text>
+            <Input style={styles.input} placeholder="Senha"/>
             <TouchableOpacity style={styles.botao} onPress={() => login()}>
-                <Text style={styles.botaoTexto}>Login</Text>
+                <Text style={styles.botaoTexto}>Entrar</Text>
             </TouchableOpacity>
         </View >
     );
@@ -26,14 +26,17 @@ const styles = StyleSheet.create({
     },
     botao: {
         padding: 10,
-        backgroundColor: 'green',
+        backgroundColor: '#FFFFFF',
+        alignItems: 'center',
+        justifyContent: 'center',
         marginTop: 20,
+        width: '95%',
         borderRadius: 8,
         border: 0,
     },
     botaoTexto: {
         fontSize: 20,
-        color: "white",
-        fontWeight: "bold"
+        color: "#4F0000",
+        textDecorationLine: 'underline',
     }
 })
