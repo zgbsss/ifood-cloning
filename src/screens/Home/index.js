@@ -1,6 +1,5 @@
 import React from "react";
 import { ScrollView, View, StyleSheet, Text } from "react-native";
-
 import CupomDesconto from "../../components/Home/CupomDesconto";
 import Ofertas from "../../components/Home/Ofertas";
 import Bloco from "../../components/Home/Bloco";
@@ -17,7 +16,7 @@ export default function Home({ navigation }) {
       <Ofertas navigation={navigation} />
       <ScrollView >
         <CupomDesconto />
-        <Text style={styles.titulo}>Hamburgueres</Text>
+        <Text style={styles.titulo}>Hamburgers</Text>
         <View style={styles.bloco}>
             <Bloco key={1} />
             <Bloco key={2} />
