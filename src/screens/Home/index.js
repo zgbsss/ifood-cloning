@@ -1,28 +1,29 @@
 import React from "react";
 import { ScrollView, View, StyleSheet, Text } from "react-native";
-import CupomDesconto from "../../components/Home/CupomDesconto";
-import Ofertas from "../../components/Home/Ofertas";
+import { useEffect, useState } from "react";
 import Bloco from "../../components/Home/Bloco";
 
+
+import HamburguerService from "../../services/hamburguer";
 export default function Home({ navigation }) {
-  const produtos = [
-    {
-      id: 1,
-      nome: 'dfakls',
+  const [hamburguer, setHamburguer] = useState([]);
+
+  useEffect(() => {
+    async function carregarHamburguer() {
+      const response = await HamburguerService.getAllHambugueres();
+      setHamburguer(response);
     }
-  ]
+    carregarHamburguer();
+  })
+
   return (
     <View style={styles.container} >
-      <Ofertas navigation={navigation} />
       <ScrollView >
-        <CupomDesconto />
         <Text style={styles.titulo}>Hamburgers</Text>
         <View style={styles.bloco}>
-            <Bloco key={1} />
-            <Bloco key={2} />
-            <Bloco key={3} />
-            <Bloco key={4} />
-            <Bloco key={5} />
+          {hamburguer.map((item) => (
+            <Bloco key={item.id} IdHamburguer={item.id} />
+          ))}        
         </View>
       </ScrollView>
     </View>

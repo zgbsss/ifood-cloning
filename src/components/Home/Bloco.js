@@ -1,18 +1,28 @@
 import React from "react";
 import { AntDesign } from '@expo/vector-icons';
+import { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function Bloco() {
+import hamburguerService from "../../services/hamburguer";
+
+
+export default function Bloco({IdHamburguer}) {
+    const [hamburguer, setHamburguer] = useState([IdHamburguer]);
+
+    useEffect(() => {
+        async function carregarHamburguer() {
+            const response = await hamburguerService.getAllHambugueres();
+            setHamburguer(response);
+        }
+        carregarHamburguer();
+    })
+
+
     return(
         <TouchableOpacity style={styles.bloco}>
-                <Text>Hamburgue</Text>
-                <Text>Valor</Text>
-            <View style={styles.star}>
-                <AntDesign name="star" color={'#DE2B2B'} size={20}/>
-                <AntDesign name="star" color={'#DE2B2B'} size={20}/>
-                <AntDesign name="star" color={'#DE2B2B'} size={20}/>
-                <AntDesign name="star" color={'#DE2B2B'} size={20}/>
-                <AntDesign name="staro" color={'#DE2B2B'} size={20}/>
+            <View>
+                <Text>{hamburguer[IdHamburguer].title}</Text>
+
             </View>
         </TouchableOpacity>
     )

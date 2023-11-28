@@ -9,7 +9,6 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import api from '../../services/api';
 import { formatNumber } from '../../helpers/formatNumber';
 
 export default function Ofertas({ navigation }) {
