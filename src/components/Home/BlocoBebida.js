@@ -1,12 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function Bloco({hamburguer}) {
+export default function BlocoBebida({bebida}) {
     return(
         <TouchableOpacity style={styles.bloco}>
             <View>
-                <Text>{hamburguer.nome}</Text>
-                <Text>{hamburguer.preco}</Text>
+                <Text>{bebida.nome}</Text>
+                <Text>{bebida.preco}</Text>
+                <Text>{bebida.tipo}</Text>
             </View>
         </TouchableOpacity>
     )
