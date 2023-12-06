@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Image, Text, TouchableOpacity, View } from "react-native";
 
 export default function BlocoBebida({bebida}) {
     return(
         <TouchableOpacity style={styles.bloco}>
             <View>
+                {bebida.imagem && <Image style={{width: 100, height: 100}} source={{uri: bebida.imagem.url}}/>}
                 <Text>{bebida.nome}</Text>
                 <Text>{bebida.preco}</Text>
                 <Text>{bebida.tipo}</Text>

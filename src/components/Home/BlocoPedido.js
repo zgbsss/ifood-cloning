@@ -1,11 +1,10 @@
 import React from "react";
-import { StyleSheet, Image, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Bloco({hamburguer}) {
     return(
         <TouchableOpacity style={styles.bloco}>
             <View>
-                {hamburguer.imagem && <Image style={{width: 100, height: 100}} source={{uri: hamburguer.imagem.url}}/>}
                 <Text>{hamburguer.nome}</Text>
                 <Text>{hamburguer.preco}</Text>
             </View>
