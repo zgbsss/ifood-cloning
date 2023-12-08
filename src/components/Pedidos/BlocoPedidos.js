@@ -5,7 +5,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 export default function BlocoPedidos({comanda}) {
     return(
         <TouchableOpacity style={styles.bloco}>
-            <MaterialIcons name="account-circle" color={"#DE2B2B"} size={25}/>
+            <MaterialIcons name="account-circle" color={"#DE2B2B"} size={25} style={styles.icon}/>
             <View style={styles.texto}>
                 <Text>Usuário: {comanda.usuario}</Text>
                 <Text>Status: {comanda.status}</Text>
@@ -28,7 +28,11 @@ const styles = StyleSheet.create({
         marginVertical: 5,
         marginHorizontal: 10,
     },
-    texto:{
+    icon:{
+        marginTop: 5,
         marginLeft: 5,
+    },
+    texto:{
+        marginLeft: 10,
     },
 })

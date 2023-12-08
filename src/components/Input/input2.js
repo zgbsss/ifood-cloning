@@ -2,11 +2,11 @@ import React from 'react';
 import { MaterialIcons } from '@expo/vector-icons';
 import { TextInput, View, StyleSheet } from 'react-native';
 
-export default function Input(props){
+export default function Input2(props){
     return (
         <View style={styles.container}> 
-            <MaterialIcons name="search" size={25} color={'#DE2B2B'} />
-            <TextInput style={styles.textInput} placeholder={props.placeholder} />
+            <MaterialIcons name="search" size={25} color={'#faeae8'} />
+            <TextInput style={styles.textInput} placeholder={props.placeholder} placeholderTextColor={'#820a02'}/>
         </View>
     );
 }
@@ -18,9 +18,8 @@ const styles = StyleSheet.create({
         width: '95%',
         flexDirection: 'row',
         alignItems: 'center',
-        borderColor: 'rgba(0,0,0,.1)',
+        borderColor: '#820a02',
         borderStyle: 'solid',
-        borderColor: 'rgba(0,0,0,.1)',
         borderStyle: 'solid',
         margin: 10,
         borderRadius: 4,
@@ -30,6 +29,7 @@ const styles = StyleSheet.create({
     textInput: {
         paddingVertical: 10,
         paddingHorizontal: 20,
+        color: 'white',
     },
 
 })

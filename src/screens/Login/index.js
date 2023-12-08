@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View, } from "react-native";
-import Input from "../../components/Input";
+import Input2 from "../../components/Input/input2";
 
 export default function Login({navigation}){
     function login() {
@@ -8,8 +8,8 @@ export default function Login({navigation}){
     }
     return (
         <View  style={styles.container}>
-            <Input style={styles.input} placeholder="Email"/>
-            <Input style={styles.input} placeholder="Senha"/>
+            <Input2 style={styles.input} placeholder="Email"/>
+            <Input2 style={styles.input} placeholder="Senha"/>
             <TouchableOpacity style={styles.botao} onPress={() => login()}>
                 <Text style={styles.botaoTexto}>Entrar</Text>
             </TouchableOpacity>
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     },
     botao: {
         padding: 10,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#faeae8',
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 20,
@@ -38,5 +38,5 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: "#4F0000",
         textDecorationLine: 'underline',
-    }
+    },
 })

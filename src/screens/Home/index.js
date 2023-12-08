@@ -31,9 +31,9 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       <ScrollView >
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: 'black'}} />
+          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: '#DE2B2B'}} />
               <Text style={styles.titulo}>Hamburgers</Text>
-          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: 'black'}} />
+          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: '#DE2B2B'}} />
       </View>
         <View style={styles.bloco}>
           {hamburguer.map((item) => (
@@ -41,9 +41,9 @@ export default function Home({ navigation }) {
           ))}
         </View>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: 'black'}} />
+          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: '#DE2B2B'}} />
               <Text style={styles.titulo}>Bebidas</Text>
-          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: 'black'}} />
+          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: '#DE2B2B'}} />
         </View>
         <View style={styles.bloco2}>
           {bebida.map((item) => (
