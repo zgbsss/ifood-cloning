@@ -30,17 +30,25 @@ export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView >
-      <Text style={styles.titulo}>Hamburgers</Text>
+      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: 'black'}} />
+              <Text style={styles.titulo}>Hamburgers</Text>
+          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: 'black'}} />
+      </View>
         <View style={styles.bloco}>
           {hamburguer.map((item) => (
             <Bloco key={item.id} hamburguer={item} />
           ))}
         </View>
-        <Text style={styles.titulo}>Bebidas</Text>
-        <View styles={styles.bloco2}>
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: 'black'}} />
+              <Text style={styles.titulo}>Bebidas</Text>
+          <View style={{flex: 1, height: 2, marginTop: 5, backgroundColor: 'black'}} />
+        </View>
+        <View style={styles.bloco2}>
           {bebida.map((item) => (
-            <BlocoBebida key={item.id} bebida={item} />
-          ))}
+              <BlocoBebida key={item.id} bebida={item} />
+            ))}
         </View>
       </ScrollView>
     </View>
@@ -55,13 +63,16 @@ const styles = StyleSheet.create({
   },
   titulo: {
     fontSize: 23,
-    fontWeight: "bold",
     marginTop: 15,
+    marginBottom: 15,
     marginRight: 10,
     marginLeft: 20,
+    textAlign: 'center',
+    fontWeight: "bold",
   },
   bloco: {
     flex: 1,
+    justifyContent: 'center',
     flexDirection: "row",
     flexWrap: "wrap",
     width: '100%',
@@ -69,6 +80,7 @@ const styles = StyleSheet.create({
   },
   bloco2: {
     flex: 1,
+    justifyContent: 'center',
     flexDirection: "row",
     flexWrap: "wrap",
     width: '100%',

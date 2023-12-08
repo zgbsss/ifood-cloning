@@ -5,10 +5,10 @@ export default function BlocoBebida({bebida}) {
     return(
         <TouchableOpacity style={styles.bloco}>
             <View>
-                {bebida.imagem && <Image style={{width: 100, height: 100}} source={{uri: bebida.imagem.url}}/>}
-                <Text>{bebida.nome}</Text>
-                <Text>{bebida.preco}</Text>
-                <Text>{bebida.tipo}</Text>
+                {bebida.imagem && <Image style={styles.imagem} source={{uri: bebida.imagem.url}}/>}
+                <Text style={styles.texto1}>{bebida.nome}</Text>
+                <Text style={styles.texto2}>{bebida.preco}</Text>
+                <Text style={styles.texto2}>{bebida.tipo}</Text>
             </View>
         </TouchableOpacity>
     )
@@ -18,16 +18,28 @@ const styles = StyleSheet.create({
     bloco: {
         borderColor: 'rgba(0,0,0,.1)',
         borderStyle: 'solid',
+        width: "45%",
+        height: 250,
         borderWidth: 1,
         borderRadius: 4,
-        height: 250,
-        width: "40%",
         paddingVertical: 5,
         paddingHorizontal: 5,
-        marginVertical: 15,
-        marginHorizontal: 15,
+        marginVertical: 10,
+        marginHorizontal: 6,
     },
-    star: {
-        flexDirection: 'row',
-    }
+    imagem: {
+        height: 150,
+        width: 150,
+        marginTop: 5,
+        marginLeft: 5,
+    },
+    texto1:{
+        marginTop: 5,
+        paddingLeft: 10,
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    texto2:{
+        paddingLeft: 10,
+    },
 })
