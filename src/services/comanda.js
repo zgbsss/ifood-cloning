@@ -1,7 +1,7 @@
 import api from '../plugins/api'
 
 class ComandaService {
-    async getAllComanda() {
+    async getAllComandas() {
         const response = await api.get("/comandas/");
         return response.data;
     }
