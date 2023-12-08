@@ -21,7 +21,6 @@ export default function PedidosAnteriores() {
   // pedidos anteriores
   return (
       <View style={styles.container}>
-        <Text style={styles.aviso}>Pedidos anteriores</Text>
         <View style={styles.bloco}>
           {comandas.map((item) => (
             <BlocoPedidos key={item.id} comanda={item} />
@@ -38,15 +37,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  aviso: {
-    marginTop: 25,
-    fontSize: 17,
-    color: '#999',
-  },
   bloco: {
     flex: 1,
-    flexDirection: "row",
-    flexWrap: "wrap",
+    marginTop: 5,
+    marginLeft: 5,
     width: '100%',
     backgroundColor: "#fff",
   },

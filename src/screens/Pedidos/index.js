@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import {MaterialCommunityIcons} from "@expo/vector-icons"
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FAB } from "react-native-paper"
 
 export default function Pedidos() {
